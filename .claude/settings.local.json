@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C \"D:\\\\Caslav\\\\Poso\\\\AniList\\\\AniRatter\" log --oneline)",
+      "Bash(python -c \"import pandas, sklearn, lightgbm, requests, joblib, pyarrow; print\\('pandas', pandas.__version__\\); print\\('sklearn', sklearn.__version__\\); print\\('lightgbm', lightgbm.__version__\\); print\\('pyarrow', pyarrow.__version__\\)\")",
+      "Bash(pip install *)",
+      "Bash(python -m src.data.fetch)",
+      "Bash(python -m src.preprocess.build_features)",
+      "Bash(python -W error::DeprecationWarning -m src.preprocess.build_features)",
+      "Bash(python -m src.train.train)",
+      "Bash(python -m src.predict.predict)",
+      "Bash(python -m src.web.build_site)",
+      "Bash(python -c ' *)",
+      "Bash(python -m src.web.serve)",
+      "Bash(curl -sI http://localhost:8000/)",
+      "Bash(curl -s http://localhost:8000/predictions.json)",
+      "Bash(python -c \"import json,sys; p=json.load\\(sys.stdin\\); print\\('items:', len\\(p['items']\\)\\); print\\('first:', p['items'][0]['title_english'] or p['items'][0]['title_romaji']\\)\")",
+      "Bash(curl -s http://localhost:8000/predictions.json -o /tmp/pred.json)",
+      "Bash(curl -s http://localhost:8000/predictions.json -o pred_check.tmp)",
+      "Bash(powershell.exe -NonInteractive -Command 'Get-NetTCPConnection -LocalPort 8000 -ErrorAction SilentlyContinue | ForEach-Object { Stop-Process -Id $_.OwningProcess -Force }')"
+    ]
+  }
+}

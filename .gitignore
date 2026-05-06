@@ -1,3 +1,11 @@
 **/.idea/**
 **/.pyc
 *.pyc
+__pycache__/
+
+# Pipeline artifacts
+data/raw/
+data/processed/
+data/models/
+data/predictions/
+web/predictions.json
